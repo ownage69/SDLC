@@ -1,0 +1,21 @@
+# Сборка и временные файлы C# (.NET)
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+
+# Кэш сред разработки (Visual Studio, Rider, VS Code)
+.vs/
+.idea/
+.vscode/
+
+# Системные файлы
+Thumbs.db
+Desktop.ini
+
+# Временные файлы MS Office
+~$*
+
+# else
+docs/
