@@ -1,0 +1,20 @@
+# Сборка .NET
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+
+# Среды разработки (Visual Studio, Rider, VS Code)
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+
+# Системные файлы
+Thumbs.db
+Desktop.ini
+
+# else
+docs/
