@@ -1,0 +1,9 @@
+digraph BookShelfDomain {
+  rankdir=LR;
+  graph [fontname="Arial", labelloc=t, label="BookShelf — модель предметной области"];
+  node [fontname="Arial", shape=record, style=filled, fillcolor="#F8FAFD", color="#7489A6"];
+  edge [fontname="Arial", color="#356AE6"];
+  Book [label="{Книга|id: UUID\ltitle: String\lauthor: String\lgenre: String\lISBN: String\ltotalPages: Integer > 0\l}"];
+  Progress [label="{Прогресс чтения|currentPage: Integer\lstatus: enum\lupdatedAt: DateTime\lpercent: вычисляемое\l}"];
+  Book -> Progress [label="1 к 0..1"];
+}

@@ -1,0 +1,18 @@
+digraph BookShelfUseCases {
+  rankdir=LR;
+  graph [fontname="Arial", labelloc=t, label="BookShelf — варианты использования"];
+  node [fontname="Arial", shape=ellipse, style=filled, fillcolor="#FBF8F1", color="#3C5948"];
+  edge [fontname="Arial", color="#79786F"];
+  Reader [shape=box, label="Читатель", fillcolor="#E9E1D3"];
+  subgraph cluster_bookshelf {
+    label="BookShelf";
+    color="#263E34";
+    catalog [label="Просматривать каталог"];
+    edit [label="Добавлять и изменять книгу"];
+    search [label="Искать книги"];
+    sort [label="Сортировать и фильтровать"];
+    card [label="Открывать карточку книги"];
+    progress [label="Обновлять прогресс чтения"];
+  }
+  Reader -> {catalog edit search sort card progress};
+}

@@ -1,0 +1,27 @@
+digraph BookShelfFunctional {
+  rankdir=TB;
+  graph [fontname="Arial", labelloc=t, label="BookShelf — функциональные требования"];
+  node [fontname="Arial", shape=box, style="rounded,filled", fillcolor="#FBF8F1", color="#8DA0BA"];
+  edge [color="#8494AA"];
+  root [label="Каталог личной библиотеки", fillcolor="#E8EEFF"];
+  catalog [label="Каталог"];
+  search [label="Поиск"];
+  sort [label="Сортировка"];
+  progress [label="Чтение"];
+  storage [label="Локальное хранение"];
+  root -> {catalog search sort progress storage};
+  catalog -> {add edit remove card};
+  search -> {titleAuthor isbn genre status};
+  sort -> {byTitle byAuthor byYear byProgress};
+  progress -> {currentPage percentage readingStatus};
+  storage -> {localSave duplicateIsbn};
+  add [label="Добавить книгу"]; edit [label="Изменить книгу"];
+  remove [label="Удалить книгу"]; card [label="Карточка книги"];
+  titleAuthor [label="Название и автор"]; isbn [label="ISBN"];
+  genre [label="Жанр"]; status [label="Статус чтения"];
+  byTitle [label="По названию"]; byAuthor [label="По автору"];
+  byYear [label="По году"]; byProgress [label="По прогрессу"];
+  currentPage [label="Текущая страница"]; percentage [label="Процент чтения"];
+  readingStatus [label="Статус книги"]; localSave [label="Сохранить локально"];
+  duplicateIsbn [label="Предупредить о повторе ISBN"];
+}

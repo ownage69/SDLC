@@ -1,0 +1,21 @@
+digraph BookShelfQuality {
+  rankdir=TB;
+  graph [fontname="Arial", labelloc=t, label="BookShelf — качественные требования"];
+  node [fontname="Arial", shape=box, style="rounded,filled", fillcolor="#FBF8F1", color="#8DA0BA"];
+  edge [color="#8494AA"];
+  root [label="Качественные требования", fillcolor="#E8EEFF"];
+  perf [label="Производительность"]; reliability [label="Надёжность"];
+  usability [label="Удобство"]; compatibility [label="Совместимость"];
+  maintenance [label="Сопровождение"];
+  root -> {perf reliability usability compatibility maintenance};
+  perf -> {search sort};
+  reliability -> {save persist};
+  usability -> {steps keyboard};
+  compatibility -> {windows resolution};
+  maintenance -> {coverage};
+  search [label="Поиск <= 2 с"]; sort [label="Сортировка <= 1 с"];
+  save [label="Сохранение <= 1 с"]; persist [label="Данные после перезапуска"];
+  steps [label="До 3 действий до прогресса"]; keyboard [label="Клавиатурная навигация"];
+  windows [label="Windows 10 / 11"]; resolution [label="Окно от 1280 x 720"];
+  coverage [label="Покрытие тестами >= 80%"];
+}
